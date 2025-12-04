@@ -1,0 +1,31 @@
+POST http://localhost:9090/register HTTP/1.1 
+# POST http://localhost:9080/api/user/register
+Content-Type: application/json 
+
+
+{ 
+  "name": "javeeth", 
+  "userName": "javeeth", 
+  "email": "javeeth@gmail.com", 
+  "password": "1234567"
+} 
+
+### To Login User  
+POST http://localhost:9090/login
+Content-Type: application/json
+
+{
+  "email": "javeeth@gmail.com",
+  "password": "1234567"
+}
+
+
+### To Logun another User 
+
+http://localhost:9090/get_user_and_profile
+Content-Type: application/json 
+
+
+{
+  "token": "29027872566fa9c23543991267e20be678b70ffc182b1426d7af7541d00d5cc8"
+}
