@@ -64,19 +64,21 @@ const storage = multer.diskStorage({
 const uploads = multer({ storage: storage });
 
 router
-
   .route("/update_profile_picture")
-
   .post(
     uploads.single("profile_picture"),
     uploadProfilePicture,
     getAllUserProfile
   );
 
+router
+    .route("/user/download_resume")
+    .post(downloadProfile);
+
 router.route("/register").post(register);
 router.route("/login").post(login);
 router.route("/user_update").post(updateUserProfile);
-router.route("/get_user_and_profile").get(getUserProfile);
+router.route("/get_user_and_profile").post(getUserProfile);
 router.route("/update_profile_data").post(updateProfileData);
 router.route("/get_all_users").get(getAllUserProfile);
 router.route("/user/download_resume").get(downloadProfile);

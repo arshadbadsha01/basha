@@ -202,7 +202,7 @@ export const getUserProfile = async (req, res) => {
   }
 };
 
-// To Upadte User's Profile Data
+// To Update User's Profile Data
 
 export const updateProfileData = async (req, res) => {
   try {
@@ -256,27 +256,37 @@ export const getAllUserProfile = async (req, res) => {
   }
 };
 
-// To download the resume of A user
 
+// to download a resume for the user
 export const downloadProfile = async (req, res) => {
   try {
-    const userId = req.query.id;
+    const { id } = req.body;  
 
-    const userProfile = await Profile.findOne({ userId: userId }).populate(
+    if (!id)
+      return res.status(400).json({ message: "id is required" });
+
+    // find profile by userId
+    const userProfile = await Profile.findOne({ userId: id }).populate(
       "userId",
-
       "name userName email profilePicture"
     );
 
-    let outputPath = await convertUserDataToPDF(userProfile);
+    if (!userProfile)
+      return res.status(404).json({ message: "Profile not found" });
 
-    return res.json({ message: outputPath });
+    // create PDF
+    const outputPath = await convertUserDataToPDF(userProfile);
+
+    // download PDF
+    return res.download(outputPath);
+
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-// To create a connection Requset between User's
+
+// To create a connection Request between User's
 
 export const sendConnectionRequest = async (req, res) => {
   try {

@@ -27,7 +27,7 @@ Content-Type: application/json
 
 
 {
-  "token": "c082653cbec675643574636b0fd7901a5dedf3cea2435818e75b484f77e9053f"
+  "token": "4aa2d4dc1f923cf084469464f879f0502fd473cdf4c10acf59c80e7a12b7b6c7"
 }
 
 
@@ -41,7 +41,7 @@ Content-Type: application/json
 
 { 
 
-    "token": "c082653cbec675643574636b0fd7901a5dedf3cea2435818e75b484f77e9053f", 
+    "token": "4aa2d4dc1f923cf084469464f879f0502fd473cdf4c10acf59c80e7a12b7b6c7", 
 
     "bio": "I'm a Software Engineer at Amazon and working on upgrading myself.", 
 
@@ -77,7 +77,17 @@ Content-Type: application/json
 
 } 
 
- 
+### to download resume
+
+POST http://localhost:9090/user/download_resume
+Content-Type: application/json
+
+
+{
+  "id": "6931ae298ef3ea5a4f97c723"
+}
+
+
 
 ### To get all Users Profile  
 
