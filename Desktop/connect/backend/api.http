@@ -27,7 +27,7 @@ Content-Type: application/json
 
 
 {
-  "token": "4aa2d4dc1f923cf084469464f879f0502fd473cdf4c10acf59c80e7a12b7b6c7"
+  "token": "408fe2b82c9969e925bdf31a4141ae821673f202e4f923eec4a08f0a181143dc"
 }
 
 
@@ -41,7 +41,7 @@ Content-Type: application/json
 
 { 
 
-    "token": "4aa2d4dc1f923cf084469464f879f0502fd473cdf4c10acf59c80e7a12b7b6c7", 
+    "token": "408fe2b82c9969e925bdf31a4141ae821673f202e4f923eec4a08f0a181143dc", 
 
     "bio": "I'm a Software Engineer at Amazon and working on upgrading myself.", 
 
