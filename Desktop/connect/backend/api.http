@@ -4,9 +4,9 @@ Content-Type: application/json
 
 
 { 
-  "name": "javeeth", 
-  "userName": "javeeth", 
-  "email": "javeeth@gmail.com", 
+  "name": "adil", 
+  "userName": "adil", 
+  "email": "adil@gmail.com", 
   "password": "1234567"
 } 
 
@@ -15,19 +15,19 @@ POST http://localhost:9090/login
 Content-Type: application/json
 
 {
-  "email": "javeeth@gmail.com",
+  "email": "adil@gmail.com",
   "password": "1234567"
 }
 
 
 ### To Logun another User 
 
-http://localhost:9090/get_user_and_profile
+POST http://localhost:9090/get_user_and_profile
 Content-Type: application/json 
 
 
 {
-  "token": "408fe2b82c9969e925bdf31a4141ae821673f202e4f923eec4a08f0a181143dc"
+  "token": "1a22747fcf5a9c84f51d67b453d37d1b0f66fc9e770d7db219a8b6a680e8d006"
 }
 
 
@@ -41,7 +41,7 @@ Content-Type: application/json
 
 { 
 
-    "token": "408fe2b82c9969e925bdf31a4141ae821673f202e4f923eec4a08f0a181143dc", 
+    "token": "1a22747fcf5a9c84f51d67b453d37d1b0f66fc9e770d7db219a8b6a680e8d006", 
 
     "bio": "I'm a Software Engineer at Amazon and working on upgrading myself.", 
 
@@ -84,7 +84,7 @@ Content-Type: application/json
 
 
 {
-  "id": "6931ae298ef3ea5a4f97c723"
+  "id": "6937ee94c73d6ad74153c951"
 }
 
 
